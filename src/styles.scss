@@ -1,1 +1,110 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "~bootstrap/dist/css/bootstrap.css";
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+* {
+    font-family: Nunito, Helvetica Neue, Helvetica, Arial, sans-serif
+}
+
+.bg-base-color-1 {
+  background-color: #1f7bdc !important;
+}
+
+.base-color-1 {
+  color: #1f7bdc !important;
+}
+
+.bg-base-color-2{
+  background-color: #e2793c !important;
+}
+
+.base-color-2 {
+  color: #e2793c !important;
+}
+
+.btn-logo-1 {
+    background-color: #1f7bdc !important;
+    color: white !important;
+}
+
+.btn-logo-1:hover {
+    background-color: #325db4 !important;
+    color: white !important;
+}
+
+.btn-logo-1:focus {
+    background-color: #325db4 !important;
+    color: white !important;
+}
+
+.btn-logo-2 {
+    background-color: #e2793c !important;
+    color: white !important;
+}
+
+.btn-logo-2:hover {
+    background-color: #e2793c !important;
+    color: white !important;
+}
+
+.btn-logo-2:focus {
+    background-color: #e2793c !important;
+    color: white !important;
+}
+
+.btn-logo-3 {
+    background-color: #1f7bdc  !important;
+    color: white !important;
+}
+
+.btn-logo-3:hover {
+  background-color: #2d52cb !important;
+  color: #fff !important;
+}
+
+.btn-logo-3:focus {
+  background-color: #2d52cb !important;
+  color: #fff !important;
+}
+
+.btn-logo-4 {
+    color: #4167b2 !important;
+}
+
+.btn-logo-4:hover {
+    background-color: #1f7bdc !important;
+    color: #F6AE84 !important;
+}
+
+.btn-logo-4:focus {
+    background-color: #4167b2 !important;
+    color: #F6AE84 !important;
+}
+
+.font-size-nav-item {
+    font-size: 1.2rem !important;
+}
+
+.btn-logo-5 {
+    color: #4167b2 !important;
+}
+
+.btn-logo-5:hover {
+    color: #325db4 !important;
+}
+
+.btn-logo-5:focus {
+  color: #325db4 !important;
+}
+.grad {
+  background: rgb(68,61,184);
+  background: linear-gradient(90deg, rgba(68,61,184,1) 0%, rgba(45,82,203,1) 34%, rgba(31,123,220,1) 55%);
+}

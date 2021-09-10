@@ -1,0 +1,118 @@
+<div class="row vh-100">
+	<div class="col-0 col-md-4 bg-base-color-1">
+		<a href="/">
+			<img class="img-fluid" src="../../../../assets/logos/logo-3.png" alt="Logo" style="padding-top: 15rem;">
+		</a>
+	</div>
+	<div class="col-12 col-md-8">
+    <ng-template #forgotPassword>
+      <div class="row pt-md-5">
+        <div class="col-4 col-md-3">
+            <button class="btn base-color-1" (click)="isForgot=false">
+              <i class="fa fa-arrow-left fa-2x fa-fw"></i>
+            </button>
+        </div>
+        <div class="col-8 col-md-3 offset-md-6">
+          Not a member?
+          <a class="text-decoration-none" routerLink="../sign-up">Sign up now</a>
+        </div>
+      </div>
+    </ng-template>
+		<div class="row pt-md-5" *ngIf="!isForgot else forgotPassword">
+			<div class="col-8 col-md-3 offset-4 offset-md-9">
+				Not a member?
+				<a class="text-decoration-none" routerLink="../sign-up">Sign up now</a>
+			</div>
+		</div>
+		<div class="row my-md-5">
+      <ng-container *ngIf="isForgot">
+        <div class="col-10 offset-1 col-md-5 offset-md-3" style="box-shadow: 1px 1px 7px 0 #4469B0">
+          <div class="d-flex flex-column bd-highlight">
+            <h2 class="text-center base-color-1">Forgot Password?</h2>
+            <ng-template #sentEmail>
+              <div class="alert alert-success" role="alert">
+                We've sent an instruction to your email.<br>
+                Please check email to reset password.<br>
+                Return home in {{sec}}s...
+              </div>
+            </ng-template>
+            <form [formGroup]="resetForm" (ngSubmit)="sendReset()" class="m-3 m-md-4 mt-md-0" *ngIf="!hasSentReset else sentEmail">
+              <div class="mb-3">
+                <label for="email" class="form-label fw-bold">Input your email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" formControlName="email">
+                <div *ngIf="email?.touched && email?.dirty">
+                  <ng-container *ngFor="let error of errors.emailErrors">
+                    <small *ngIf="email?.hasError(error.code)" class="d-block text-danger"
+                           role="alert">{{error.message}}</small>
+                  </ng-container>
+                </div>
+              </div>
+              <div class="text-center">
+                <button [disabled]="resetForm.invalid" class="btn btn-logo-1 px-5 fw-bold">Send reset Instructions</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!isForgot">
+			<div class="col-10 offset-1 col-md-5 offset-md-3" style="box-shadow: 1px 1px 7px 0 #4469B0">
+				<div class="d-flex flex-column bd-highlight">
+					<h1 class="text-center base-color-1">Sign in</h1>
+					<div class="d-flex flex-row bd-highlight justify-content-center">
+						<div class="mx-2">
+							<a class="fb social-login-btn" [href]="FACEBOOK_AUTH_URL">
+								<i class="fa fa-facebook fa-fw"></i>
+							</a>
+						</div>
+						<div>
+							<a class="google social-login-btn" [href]="GOOGLE_AUTH_URL">
+								<i class="fa fa-google fa-fw"></i>
+							</a>
+						</div>
+						<div class="mx-2">
+							<a class="github social-login-btn" [href]="GITHUB_AUTH_URL">
+								<i class="fa fa-github fa-fw"></i>
+							</a>
+						</div>
+					</div>
+          <ng-container *ngIf="hasSocialSignedUp">
+            <div>
+              <small class="d-block text-danger text-center" role="alert">Tài khoản này đã được đăng kí.</small>
+            </div>
+          </ng-container>
+					<div>
+						<hr class="hr-text" data-content="Or">
+					</div>
+					<form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="m-3 m-md-4 mt-md-0">
+<!--
+            <pre>
+              {{loginForm.value | json}}
+            </pre>
+            <p>Form Status: {{ loginForm.status }}</p>
+-->
+						<div class="mb-3">
+						  <label for="username" class="form-label fw-bold">Username</label>
+						  <input type="text" class="form-control" id="username" aria-describedby="emailHelp" formControlName="username" (input)="delErr()">
+						</div>
+						<div class="mb-3">
+							<div class="d-flex flex-row bd-highlight justify-content-between">
+								<label for="password" class="form-label fw-bold">Password</label>
+								<div><a class="text-decoration-none" style="cursor: pointer" (click)="isForgot=true">Forgot password?</a></div>
+							</div>
+						  <input type="password" class="form-control" id="password" formControlName="password" (input)="delErr()">
+						</div>
+            <ng-container *ngIf="hasBadCredential">
+              <div class="mb-3">
+                <small class="d-block text-danger text-center" role="alert">Bad Credential</small>
+              </div>
+            </ng-container>
+						<div class="text-center">
+							<button class="btn btn-logo-1 px-5 fw-bold">Sign In</button>
+						</div>
+          </form>
+				</div>
+			</div>
+      </ng-container>
+		</div>
+	</div>
+</div>

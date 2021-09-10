@@ -1,0 +1,94 @@
+.carousel {
+  height: 300px;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 300px;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+}
+
+.search-form-v2 {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -3rem;
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  background-color: #393939ad;
+  border-radius: 15px 15px 0 0;
+  height: 3rem;
+}
+
+.title-content {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.search-form-content {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  padding: 5px 15px 15px 15px;
+  background-color: #fff;
+  border-radius: 0 0 15px 15px;
+}
+
+.popover-custom {
+  width: 40%;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  background-color: #fff;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+
+.input-custom {
+  height: auto !important;
+  width: 2em !important;
+  text-align: center;
+  border-radius: unset;
+  border: 1px solid #ced4da !important;
+  margin: 0 -1px 0 -1px;
+}
+
+.shadow-1 {
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+
+.change-value-btn {
+  border: 1px solid #ced4da;
+  cursor: pointer;
+}
+
+div.change-value-btn:hover {
+  background-color: #ced4da;
+}
+
+div.change-value-btn:focus {
+  background-color: #fff;
+}
+
+.desc-btn {
+  border-radius: 5px 0 0 5px;
+}
+
+.asc-btn {
+  border-radius: 0 5px 5px 0;
+}

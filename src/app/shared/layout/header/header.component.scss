@@ -1,0 +1,26 @@
+
+.dropdown-menu-macos {
+	gap: .25rem;
+	padding: .5rem;
+	border-radius: .5rem;
+}
+
+.dropdown-menu-macos .dropdown-item {
+	border-radius: .25rem;
+}
+
+.dropdown-menu-macos .dropdown-item:hover {
+	background-color: #4167b2;
+	/* color: white; */
+	color: #F6AE84;
+}
+
+.dropdown-item {
+	color: #4167b2;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+	color: #fff;
+	text-decoration: none;
+	background-color: #4167b2 !important;
+}

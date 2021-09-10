@@ -1,0 +1,77 @@
+<div class="row vh-100">
+	<div class="col-0 col-md-4 bg-base-color-2">
+		<a href="/">
+			<img class="img-fluid" src="../../../../assets/logos/logo-1.png" alt="Logo" style="padding-top: 15rem;">
+		</a>
+	</div>
+	<div class="col-12 col-md-8">
+		<div class="row pt-md-5">
+			<div class="col-8 col-md-3 offset-4 offset-md-9">
+				Already a member?
+				<a class="text-decoration-none" routerLink="../sign-in">Sign in</a>
+			</div>
+		</div>
+		<div class="row my-md-5">
+			<div class="col-10 offset-1 col-md-5 offset-md-3" style="box-shadow: 1px 1px 7px 0 #4469B0">
+				<div class="d-flex flex-column bd-highlight">
+					<h1 class="text-center base-color-2">Sign up</h1>
+					<form class="m-3 m-md-4 mt-md-0" [formGroup]="signUpForm"  (ngSubmit)="onSubmit()">
+<!--
+            <pre>
+              {{signUpForm.value | json}}
+            </pre>
+-->
+            <div class="mb-3">
+              <label for="username" class="form-label fw-bold">Username</label>
+              <input type="text" class="form-control" id="username" aria-describedby="emailHelp" formControlName="username">
+              <div *ngIf="username?.touched && username?.dirty">
+                <ng-container *ngFor="let error of errors.usernameErrors">
+                  <small *ngIf="username?.hasError(error.code)" class="d-block text-danger"
+                         role="alert">{{error.message}}</small>
+                </ng-container>
+              </div>
+            </div>
+						<div class="mb-3">
+						  <label for="exampleInputEmail1" class="form-label fw-bold">Email address</label>
+						  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+              <div *ngIf="email?.touched && email?.dirty">
+                <ng-container *ngFor="let error of errors.emailErrors">
+                  <small *ngIf="email?.hasError(error.code)" class="d-block text-danger"
+                         role="alert">{{error.message}}</small>
+                </ng-container>
+              </div>
+            </div>
+            <fieldset formGroupName="password">
+              <div class="mb-3">
+                <label for="password1" class="form-label fw-bold">Password</label>
+                <input type="password" class="form-control" id="password1" formControlName="input">
+                <div *ngIf="input?.touched && input?.dirty">
+                  <ng-container *ngFor="let error of errors.passwordErrors">
+                    <small *ngIf="input?.hasError(error.code)" class="d-block text-danger"
+                           role="alert">{{error.message}}</small>
+                  </ng-container>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password2" class="form-label fw-bold">Repeat Password</label>
+                <input type="password" class="form-control" id="password2" formControlName="confirm">
+                <div *ngIf="password?.touched && password?.dirty && confirm?.touched && confirm?.dirty">
+                  <ng-container *ngFor="let error of errors.passwordErrors">
+                    <small *ngIf="password?.hasError(error.code)" class="d-block text-danger"
+                           role="alert">{{error.message}}</small>
+                  </ng-container>
+                </div>
+              </div>
+            </fieldset>
+						<div class="mb-3">
+						  By creating an account you agree to our <a href="/">Terms & Privacy.</a>
+						</div>
+						<div class="text-center">
+							<button [disabled]="!signUpForm.valid" class="btn btn-logo-2 px-5 fw-bold">Create account</button>
+						</div>
+					  </form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
