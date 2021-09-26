@@ -3,6 +3,7 @@ import {
   Component,
   ComponentFactoryResolver,
   ComponentRef,
+  ElementRef,
   Input,
   OnInit,
   QueryList,
@@ -48,11 +49,29 @@ export class MainComponent implements OnInit, AfterViewInit {
     private resolver: ComponentFactoryResolver,
     private flightService: FlightService,
     private  router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private elem: ElementRef
   ) {}
 
 
   ngOnInit(): void {
+
+    let items = this.elem.nativeElement.querySelectorAll('.carousel .carousel-item')
+
+    items.forEach((el: { nextElementSibling: any; appendChild: (arg0: any) => void; }) => {
+      const minPerSlide = 6
+      let next = el.nextElementSibling
+      for (var i = 1; i < minPerSlide; i++) {
+        if (!next) {
+          // wrap carousel by using first child
+          next = items[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+      }
+    })
+
     this.route.data.subscribe((data ) => {
       this.flightService.airportList = data.airports as Airport[];
       this.airportList = this.flightService.airportList;
@@ -71,6 +90,8 @@ export class MainComponent implements OnInit, AfterViewInit {
     }, {
       validators: [compare]
     });
+
+  
   }
 
   ngAfterViewInit() {

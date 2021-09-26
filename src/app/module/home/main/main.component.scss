@@ -1,23 +1,23 @@
-.carousel {
-  height: 300px;
-}
+// .carousel {
+//   height: 300px;
+// }
 
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
+// /* Since positioning the image, we need to help out the caption */
+// .carousel-caption {
+//   bottom: 3rem;
+//   z-index: 10;
+// }
 
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 300px;
-}
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-}
+// /* Declare heights because of positioning of img element */
+// .carousel-item {
+//   height: 300px;
+// }
+// .carousel-item > img {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   min-width: 100%;
+// }
 
 .search-form-v2 {
   width: 75%;
@@ -26,7 +26,7 @@
   margin-top: -3rem;
   z-index: 10;
   position: relative;
-  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   background-color: #393939ad;
   border-radius: 15px 15px 0 0;
   height: 3rem;
@@ -35,6 +35,7 @@
 .title-content {
   color: white;
   font-size: 1.8rem;
+  padding-top: 0.8%;
 }
 
 .search-form-content {
@@ -43,7 +44,7 @@
   margin-right: auto;
   z-index: 10;
   position: relative;
-  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 5px 15px 15px 15px;
   background-color: #fff;
   border-radius: 0 0 15px 15px;
@@ -56,7 +57,7 @@
   display: flex;
   background-color: #fff;
   border-radius: 15px 15px 15px 15px;
-  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 .input-custom {
@@ -69,7 +70,7 @@
 }
 
 .shadow-1 {
-  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 .change-value-btn {
@@ -91,4 +92,187 @@ div.change-value-btn:focus {
 
 .asc-btn {
   border-radius: 0 5px 5px 0;
+}
+
+.content-flight {
+  background-repeat: no-repeat;
+  height: 30rem !important;
+  background-image: url("http://u605066.webmienphi.vn/userfiles/img/605066/slide2.jpg");
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+p {
+  color: #353533;
+  font-family: Bebeboo-SemiBold;
+  line-height: 22.8571px;
+}
+
+p.bold.mt15 {
+  font-weight: bold;
+}
+
+div.col-md-3 {
+  text-align: center;
+}
+
+//@at-root
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+  transform: translateX(0);
+}
+
+span.carousel-control-next-icon:after,
+span.carousel-control-prev-icon:after {
+  content: "";
+}
+
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  border: none;
+  box-shadow: none;
+}
+
+span.carousel-control-prev-icon {
+  margin-right: 30%;
+  width: 15%;
+  height: 15%;
+}
+
+span.carousel-control-next-icon {
+  margin-left: 30%;
+  width: 15%;
+  height: 15%;
+}
+
+.card-img-top-2 {
+  margin-top: 2rem;
+}
+
+.text-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: #000;
+  font-family: Bebeboo-SemiBold;
+  text-align: center;
+  margin: 4% 0%;
+}
+
+.text-title h1 {
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 20px 20px;
+}
+
+h1 span {
+  background: #fff;
+  padding: 0 20px;
+}
+
+.position-text {
+  margin: 25% 40% 0% 0;
+}
+
+.learn-more > .btn {
+  border-radius: 7%;
+  border: 2px solid #e3530d;
+}
+
+.content-landing {
+  background-color: rgba(246, 246, 248, 0.884);
+}
+
+.text-title-1 {
+  padding-left: 20%;
+  padding-right: 40%;
+  text-align: left;
+}
+
+.text-title-2 {
+  padding: 0 10% 0 20%;
+  text-align: left;
+}
+
+.moto-text_normal {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  color: #292929;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0px;
+}
+
+.learn-more {
+  margin-left: 11rem;
+}
+
+.background-end {
+  margin-top: 5rem;
+  padding-top: 5rem;
+  background-image: url("https://wildrenfrew.com/wp-content/uploads/2019/09/DSC0979-proof.jpg");
+  height: 30rem;
+  background-position: 50% 50%;
+  background-size: cover;
+  font-size: 18px;
+  line-height: 28.8px;
+  background-color:rgb(49 49 49) !important;
+  color:rgb(255 255 255 / 0.7) !important
+}
+
+.text-content-6 {
+  justify-content: space-between;
+  text-align: left;
+  color: rgb(255 255 255 / 0.7);
+  font-family: proxima-nova;
+  font-size: 18px;
+  line-height: 28.8px;
+  margin:2px 400px 48px 400px;
+
+}
+
+.text-title-6 {
+  color: rgb(255 255 255);
+  font-family: nexa_rust_sansblack;
+  font-size: 24px;
+  letter-spacing: 8px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.btn-plan {
+  border-color: rgb(255 255 255 / 0.7);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  color: rgb(255 255 255);
+  display: inline-block;
+  font-family: proxima-nova;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 38px;
+  margin: 10px 0px 32px;
+  padding: 5.6px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(0,0,0,0);
 }
